@@ -15,5 +15,6 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Poppins', sans-serif;
     transition: all 0.25s linear;
     font-size:16px;
+    position:relative;
   }
 `

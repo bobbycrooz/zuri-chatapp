@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom'
 
 
 const NavContainer = Styled.div`
- postion:fixed;
+ position:fixed;
+ background-color:white;
  top:0;
- height:100px;
+ height:90px;
  width:100%;
  display:flex;
  /* flex-grow:1; */
  justify-content:space-around;
  align-items:center;
+ z-index:5;
  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 `
@@ -45,14 +47,19 @@ const NavLinks = Styled(Link)`
  /* width:100%; */
 line-height:auto;
 font-size:inherit;
+font-weight:600;
 display:flex;
  justify-content:center;
  align-items:center;
  text-decoration:none;
  text-transform:capitalize;
 
- &:hover{}
- &:active{}
+ &:hover{
+     border-bottom:3px solid ${({theme}) => theme.secondary}
+
+ }
+ &:active{
+ }
  &:visited{}
 
 `
@@ -122,7 +129,7 @@ const Navbar = () => {
                 <NavLinks>Contact Us</NavLinks>
             </NavLinkContainer>
             <NavButtonContainer>
-                <NavSignBtn>sing in</NavSignBtn>
+                <NavSignBtn>sign in</NavSignBtn>
                 <NavCreateBtn>Create Account</NavCreateBtn>
             </NavButtonContainer>
 
