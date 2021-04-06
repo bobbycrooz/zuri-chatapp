@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState} from 'react'
+import {GlobalStyle} from './Styles/Styles'
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./Styles/theme";
 
-function App() {
+import Soundcourse from './Soundcourse'
+import Splashscreen from './Components/Splashscreen'
+
+
+
+
+const App = () => {
+  const [showApp, setShowApp] = useState(false)
+
+  setTimeout(() => {
+    setShowApp(true)
+  }, 1000);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={defaultTheme}>
+    <GlobalStyle/>
+    {
+      showApp ? <Soundcourse/> : <Splashscreen/>
+    }
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
