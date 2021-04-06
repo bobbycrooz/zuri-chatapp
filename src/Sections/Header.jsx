@@ -3,19 +3,21 @@ import Styled from 'styled-components'
 import Navbar from '../Components/Navbar'
 import img1 from '../Assets/images/video.png'
 import playbtn from '../Assets/images/playbtn.png'
+import arrow from '../Assets/images/Arrow.png'
 
 
 
 
 const HeaderContainer = Styled.div`
- /* border:1px solid red; */
+ border:1px solid red;
  width:100%;
- height:85vh;
+ height:650px;
  z-index:4;
 display:flex;
  align-items:center;
  justify-content:center;
 
+ position:relative;
 
  
  
@@ -45,10 +47,14 @@ flex-direction:column;
 
 
 h1{
+    font-size:43px;
+ border:1px solid red;
+ width:90%;
+ line-height:123%;
 
 }
 h5{
- margin-top: 2.5rem;
+ margin-top: 2rem;
  margin-left:0.2rem;
 
 }
@@ -75,6 +81,16 @@ cursor:pointer;
  /* width:400px;
  height:344px; */
 `
+
+const Arrow = Styled.img`
+position:absolute;
+bottom:0;
+left:50%;
+transform: translateX(-50%);
+cursor:pointer;
+ /* width:400px;
+ height:344px; */
+`
 const GetStartedBtn = Styled.button`
  border:1px solid ${({theme}) => theme.secondary};
  background-color: ${({theme}) => theme.secondary};
@@ -85,8 +101,10 @@ const GetStartedBtn = Styled.button`
  font-weight:500;
  line-height:134.8%;
  cursor:pointer;
- margin-top: 2.5rem;
-
+ margin-top: 2rem;
+&:focus{
+    outline:none;
+}
 display:flex;
  justify-content:center;
  align-items:center;
@@ -126,7 +144,7 @@ const Header = () => {
 
                 
             </HeaderContent>
-                    
+                    <Arrow src={arrow}/>
                 </HeaderContainer>
         </>
     )
