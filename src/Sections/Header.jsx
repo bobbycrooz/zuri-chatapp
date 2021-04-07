@@ -9,7 +9,7 @@ import arrow from '../Assets/images/Arrow.png'
 
 
 const HeaderContainer = Styled.div`
- border:1px solid red;
+ /* border:1px solid red; */
  width:100%;
  height:650px;
  z-index:4;
@@ -48,7 +48,7 @@ flex-direction:column;
 
 h1{
     font-size:43px;
- border:1px solid red;
+ /* border:1px solid red; */
  width:90%;
  line-height:123%;
 
@@ -88,8 +88,14 @@ bottom:0;
 left:50%;
 transform: translateX(-50%);
 cursor:pointer;
- /* width:400px;
- height:344px; */
+padding:1rem;
+background-color:#ffffff;
+transition:all 0.25s linear;
+ &:hover{
+     border-radius:50%;
+padding:1rem;
+background-color:#eeeeee;
+ }
 `
 const GetStartedBtn = Styled.button`
  border:1px solid ${({theme}) => theme.secondary};

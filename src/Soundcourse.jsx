@@ -1,8 +1,7 @@
 import React from 'react'
 // import logo from './Assets/logos/soundcourselogo.png'
 // import Styled from 'styled-components'
-import Header from './Sections/Header'
-import Fewdetails from './Sections/Fewdetails'
+import Homepage from './Pages/Homepage'
 
 // const Div = Styled.div`
 //  border:1px solid blue;
@@ -18,8 +17,7 @@ import Fewdetails from './Sections/Fewdetails'
 const Soundcourse = () => {
     return (
         <>
-        <Header/>
-        <Fewdetails/>
+       <Homepage/>
         </>
     )
 }

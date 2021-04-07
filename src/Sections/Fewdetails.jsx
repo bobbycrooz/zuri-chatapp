@@ -5,10 +5,9 @@ import img2 from '../Assets/images/man2.png'
 import img3 from '../Assets/images/man3.png'
 
 const DetailsContainer = Styled.div`
- border:1px solid red;
  width:100%;
  padding:1rem 10rem;
- background-color:#d6d0fb86;
+ background-color:${({theme}) => theme.secondaryLite};
  display:flex;
  justify-content:center;
  align-items:center;
@@ -16,7 +15,8 @@ const DetailsContainer = Styled.div`
 
 `
 const Detailshead = Styled.div`
-margin-top:1.5rem;
+margin:2rem 0;
+
  width:100%;
 display:flex;
  justify-content:center;
@@ -44,22 +44,28 @@ display:flex;
 
 `
 const ExploreContainer = Styled.div`
- border:1px solid blue;
  width:997px;
  height:329px;
  display:flex;
  flex-direction:${({rev}) => rev ? 'row-reverse' : 'row'};
  justify-content:space-between;
- align-items:center;
-
+ align-items:flex-start;
+margin-top:2rem;
 
 `
 const ExploreDetails = Styled.div`
- border:1px solid yellow;
+ width:500px;
   h2{
+
+ width:456px;
+ font-weight:700;
+
 
  }
  p{
+ width:326px;
+ margin-top:2rem;
+ line-height:24px;
 
  }
  
@@ -68,7 +74,6 @@ const ExploreDetails = Styled.div`
 `
 
 const ExploreImg = Styled.img`
- border:1px solid yellow;
  width:450px;
  height:320px;
 
