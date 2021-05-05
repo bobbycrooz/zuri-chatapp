@@ -77,7 +77,7 @@ const Section = styled.section`
   @media screen and (max-width: 503px) {
     & {
       width: 100%;
-  height: 100vh;
+  
         display:flex;
         flex-direction:column;
         align-items:center;

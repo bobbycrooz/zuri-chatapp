@@ -27,4 +27,6 @@ export const GlobalStyle = createGlobalStyle`
    }
 
   }
+  
+
 `;
