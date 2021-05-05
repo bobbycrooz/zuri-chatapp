@@ -1,0 +1,9 @@
+.main_container{
+    width:500px;
+   height: 100vh;
+   @media screen and (max-width: 550px) {
+       &{
+           width:100%;
+       }
+   }
+}
