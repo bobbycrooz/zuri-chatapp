@@ -16,6 +16,8 @@ const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position:fixed;
+  top:0;
   div.logo {
     font-size: 2rem;
     font-weight: 600;
@@ -39,7 +41,10 @@ const Navbar = styled.div`
         display: block;
         @media screen and (max-width: 405px) {
           & {
-            display: none;
+            display: block;
+    width: 40px;
+
+
           }
         }
       }
@@ -52,7 +57,7 @@ const Section = styled.section`
   background: #06aac7;
   width:500px;
   overflow-y: scroll;
-  /* margin-top:1rem; */
+  margin-top:10vh;
   padding:0.5rem;
   height: calc(100% - 18vh);
   background-color: #0099ff;
@@ -131,6 +136,37 @@ const Button = styled.button`
  
 `;
 
+const MobileSignOut = styled.button`
+    padding: 0.8rem;
+  text-transform: uppercase;
+  background: #2828e4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius:50%;
+  /* border-radius:0.5rem; */
+display:flex;
+justify-content:center;
+align-items:center;
+  
+  height: 50px;
+  width:50px;
+      display:none;
+
+ 
+ @media screen and (max-width: 405px) {
+    & {
+      display:block;
+
+    }
+  }
+`
+
+
+
+
 //   @media screen and (max-width: 500px) {
 //     & {
 
@@ -173,6 +209,9 @@ const Chatapp = ({ firestore, useCollectionData, auth, firebase }) => {
         <div className='logo'>zuriTalk</div>
         <div className='space'></div>
         <SignOut auth={auth} />
+        <MobileSignOut onClick={() => auth.signOut()}>
+          <i class="fas fa-sign-out-alt"></i>
+        </MobileSignOut>
       </Navbar>
 
       <Section>
