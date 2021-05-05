@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -13,20 +13,18 @@ export const GlobalStyle = createGlobalStyle`
       color:black;
       display:flex;
       justify-content:center;
-      position:absolute;
       width:100%;
       height:100vh;
          font-family: 'Poppins', sans-serif;
     transition: all 0.25s linear;
     font-size:16px;
-    /* position:relative; */
     overflow-y:hidden;
-       @media screen and (max-width: 400px) {
+       @media screen and (max-width: 450px) {
        &{
    
-           border:1px solid red;
+           display:block;
        }
    }
 
   }
-`
+`;
