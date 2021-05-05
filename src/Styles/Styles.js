@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
          font-family: 'Poppins', sans-serif;
     transition: all 0.25s linear;
     font-size:16px;
-    overflow-y:hidden;
+    overflow-y:scroll;
        @media screen and (max-width: 450px) {
        &{
    
