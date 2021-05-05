@@ -21,6 +21,12 @@ export const GlobalStyle = createGlobalStyle`
     font-size:16px;
     /* position:relative; */
     overflow-y:hidden;
+       @media screen and (max-width: 400px) {
+       &{
+   
+           border:1px solid red;
+       }
+   }
 
   }
 `
